@@ -1,0 +1,18 @@
+ubuntu@ip-172-31-22-78:~$ cd home
+ubuntu@ip-172-31-22-78:~/home$ ls -la
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 12 04:35 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Dec 12 04:43 ..
+-rw-rw-r-- 1 ubuntu ubuntu    0 Dec 12 04:35 demo.txt
+ubuntu@ip-172-31-22-78:~/home$ cat demo.txt
+ubuntu@ip-172-31-22-78:~/home$ vi demo.txt
+ubuntu@ip-172-31-22-78:~/home$ cat demo.txt
+Hi Hepsi,
+
+Welcome to Devops Training!
+
+All the best for your Furture and carrer Growth.
+
+Your lovable,
+Julie
+ubuntu@ip-172-31-22-78:~/home$ 
