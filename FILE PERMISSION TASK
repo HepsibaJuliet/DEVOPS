@@ -1,11 +1,13 @@
 ubuntu@ip-172-31-22-78:~$ cd home
+ubuntu@ip-172-31-22-78:~/home$ ls -l
+total 4
+-rw-rw-r-- 1 ubuntu ubuntu 110 Dec 12 05:13 demo.txt
+ubuntu@ip-172-31-22-78:~/home$ chmod 664 demo.txt
 ubuntu@ip-172-31-22-78:~/home$ ls -la
-total 8
-drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 12 04:35 .
-drwxr-x--- 5 ubuntu ubuntu 4096 Dec 12 04:43 ..
--rw-rw-r-- 1 ubuntu ubuntu    0 Dec 12 04:35 demo.txt
-ubuntu@ip-172-31-22-78:~/home$ cat demo.txt
-ubuntu@ip-172-31-22-78:~/home$ vi demo.txt
+total 12
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 12 05:13 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Dec 12 05:13 ..
+-rw-rw-r-- 1 ubuntu ubuntu  110 Dec 12 05:13 demo.txt
 ubuntu@ip-172-31-22-78:~/home$ cat demo.txt
 Hi Hepsi,
 
@@ -15,4 +17,13 @@ All the best for your Furture and carrer Growth.
 
 Your lovable,
 Julie
-ubuntu@ip-172-31-22-78:~/home$ 
+ubuntu@ip-172-31-22-78:~/home$ vi demo.txt
+ubuntu@ip-172-31-22-78:~/home$ cat demo.txt
+Dear Hepsi, 
+
+Have a Blessed year, wish you a happy new year!
+
+
+Lovable,
+Julie.
+ubuntu@ip-172-31-22-78:~/home$ sudo su - hepsi
