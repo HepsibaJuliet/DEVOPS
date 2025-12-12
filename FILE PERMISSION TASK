@@ -1,23 +1,23 @@
 ubuntu@ip-172-31-22-78:~$ cd home
 ubuntu@ip-172-31-22-78:~/home$ ls -l
 total 4
--rw-rw-r-- 1 ubuntu ubuntu 110 Dec 12 05:13 demo.txt
-ubuntu@ip-172-31-22-78:~/home$ chmod 664 demo.txt
+-rw-rw-r-- 1 ubuntu ubuntu 80 Dec 12 05:29 demo.txt
+ubuntu@ip-172-31-22-78:~/home$ chmod 644 demo.txt
+ubuntu@ip-172-31-22-78:~/home$ ls -l
+total 4
+-rw-r--r-- 1 ubuntu ubuntu 80 Dec 12 05:29 demo.txt
+ubuntu@ip-172-31-22-78:~/home$ chmod 744 demo.txt
 ubuntu@ip-172-31-22-78:~/home$ ls -la
 total 12
-drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 12 05:13 .
-drwxr-x--- 5 ubuntu ubuntu 4096 Dec 12 05:13 ..
--rw-rw-r-- 1 ubuntu ubuntu  110 Dec 12 05:13 demo.txt
-ubuntu@ip-172-31-22-78:~/home$ cat demo.txt
-Hi Hepsi,
-
-Welcome to Devops Training!
-
-All the best for your Furture and carrer Growth.
-
-Your lovable,
-Julie
-ubuntu@ip-172-31-22-78:~/home$ vi demo.txt
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 12 05:29 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Dec 12 05:29 ..
+-rwxr--r-- 1 ubuntu ubuntu   80 Dec 12 05:29 demo.txt
+ubuntu@ip-172-31-22-78:~/home$ chmod 764 demo.txt
+ubuntu@ip-172-31-22-78:~/home$ ls -la
+total 12
+drwxrwxr-x 2 ubuntu ubuntu 4096 Dec 12 05:29 .
+drwxr-x--- 5 ubuntu ubuntu 4096 Dec 12 05:29 ..
+-rwxrw-r-- 1 ubuntu ubuntu   80 Dec 12 05:29 demo.txt
 ubuntu@ip-172-31-22-78:~/home$ cat demo.txt
 Dear Hepsi, 
 
@@ -26,4 +26,14 @@ Have a Blessed year, wish you a happy new year!
 
 Lovable,
 Julie.
-ubuntu@ip-172-31-22-78:~/home$ sudo su - hepsi
+ubuntu@ip-172-31-22-78:~/home$ vi demo.txt
+ubuntu@ip-172-31-22-78:~/home$ cat demo.txt
+Dear Julie,
+
+Thanks for the Wounderful wishes, Wishing you the Same.
+
+
+Lovable,
+Hepsi.
+
+ubuntu@ip-172-31-22-78:~/home$ 
