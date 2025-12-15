@@ -1,3 +1,5 @@
+# FILE CREATION TASK 1:
+
 ubuntu@ip-172-31-26-76:~$ mkdir home
 ubuntu@ip-172-31-26-76:~$ cd home
 ubuntu@ip-172-31-26-76:~/home$ mkdir my_folder
@@ -47,3 +49,46 @@ ubuntu@ip-172-31-26-76:~/home/my_folder$ ls -l
 total 8
 -rw-rw-r-- 1 ubuntu ubuntu  65 Dec 15 04:28 another_file.txt
 -rw-rw-r-- 1 ubuntu ubuntu 138 Dec 15 04:31 my_file.txt
+
+
+
+
+FILE CREATION TASK 2:
+
+ubuntu@ip-172-31-26-76:~/home/task2_filecreation$ cd ..
+ubuntu@ip-172-31-26-76:~/home$ mkdir filecreationtask2
+ubuntu@ip-172-31-26-76:~/home$ cd filecreationtask2
+ubuntu@ip-172-31-26-76:~/home/filecreationtask2$ touch file1.txt file2.txt file3.txt file4.txt file5.txt file6.txt file7.txt file8.txt file9.txt file10.txt file11.txt file12.txt file13.txt file14.txt file15.txt file16.txt file17.txt file18.txt file19.txt file20.txt
+ubuntu@ip-172-31-26-76:~/home/filecreationtask2$ ls -l
+total 0
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file1.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file10.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file11.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file12.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file13.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file14.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file15.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file16.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file17.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file18.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file19.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file2.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file20.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file3.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file4.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file5.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file6.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file7.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file8.txt
+-rw-rw-r-- 1 ubuntu ubuntu 0 Dec 15 05:15 file9.txt
+ubuntu@ip-172-31-26-76:~/home/filecreationtask2$ mv file1.txt file1.yml
+ubuntu@ip-172-31-26-76:~/home/filecreationtask2$ mv file2.txt file2.yml
+ubuntu@ip-172-31-26-76:~/home/filecreationtask2$ mv file3.txt file3.yml
+ubuntu@ip-172-31-26-76:~/home/filecreationtask2$ mv file4.txt file4.yml
+ubuntu@ip-172-31-26-76:~/home/filecreationtask2$ mv file5.txt file5.yml
+ubuntu@ip-172-31-26-76:~/home/filecreationtask2$ ls -t | head -5
+file1.yml
+file10.txt
+file11.txt
+file12.txt
+file13.txt
