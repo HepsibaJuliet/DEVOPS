@@ -1,0 +1,49 @@
+ubuntu@ip-172-31-26-76:~$ mkdir home
+ubuntu@ip-172-31-26-76:~$ cd home
+ubuntu@ip-172-31-26-76:~/home$ mkdir my_folder
+ubuntu@ip-172-31-26-76:~/home$ cd my_folder
+ubuntu@ip-172-31-26-76:~/home/my_folder$ touch my_file.txt
+ubuntu@ip-172-31-26-76:~/home/my_folder$ touch another_file.txt
+ubuntu@ip-172-31-26-76:~/home/my_folder$ vi my_file.txt
+ubuntu@ip-172-31-26-76:~/home/my_folder$ cat my_file.txt
+Hi Hepsi,
+
+Good morning!
+
+Welcome to Learning Program.
+
+Thanks,
+Julie.
+
+
+ubuntu@ip-172-31-26-76:~/home/my_folder$ vi another_file.txt
+ubuntu@ip-172-31-26-76:~/home/my_folder$ cat another_file.txt
+Thanks for opportunity!
+
+Great Team to learn with
+
+Thanks,
+Julie
+ubuntu@ip-172-31-26-76:~/home/my_folder$ cat another_file.txt >> my_file.txt
+ubuntu@ip-172-31-26-76:~/home/my_folder$ cat my_file.txt
+Hi Hepsi,
+
+Good morning!
+
+Welcome to Learning Program.
+
+Thanks,
+Julie.
+
+
+Thanks for opportunity!
+
+Great Team to learn with
+
+Thanks,
+Julie
+
+ubuntu@ip-172-31-26-76:~/home/my_folder$ ls -l
+total 8
+-rw-rw-r-- 1 ubuntu ubuntu  65 Dec 15 04:28 another_file.txt
+-rw-rw-r-- 1 ubuntu ubuntu 138 Dec 15 04:31 my_file.txt
