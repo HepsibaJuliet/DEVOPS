@@ -1,0 +1,58 @@
+# 1.Get me the IP address of a particular domain (guvi.in). How do I find my CPU/memory usage of my server?. Test the connectivity between 2 nodes?
+ubuntu@ip-172-31-67-47:~$ nslookup guvi.in #
+
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	guvi.in
+Address: 172.67.70.207
+Name:	guvi.in
+Address: 104.26.4.88
+Name:	guvi.in
+Address: 104.26.5.88
+Name:	guvi.in
+Address: 2606:4700:20::681a:458
+Name:	guvi.in
+Address: 2606:4700:20::681a:558
+Name:	guvi.in
+Address: 2606:4700:20::ac43:46cf
+
+ubuntu@ip-172-31-67-47:~$ dig guvi.in
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.1-Ubuntu <<>> guvi.in
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 50509
+;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;guvi.in.			IN	A
+
+;; ANSWER SECTION:
+guvi.in.		294	IN	A	104.26.4.88
+guvi.in.		294	IN	A	104.26.5.88
+guvi.in.		294	IN	A	172.67.70.207
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Wed Dec 17 15:10:38 UTC 2025
+;; MSG SIZE  rcvd: 84
+
+ubuntu@ip-172-31-67-47:~$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           914Mi       363Mi       218Mi       2.7Mi       496Mi       551Mi
+Swap:             0B          0B          0B
+ubuntu@ip-172-31-67-47:~$ traceroute guvi.in
+traceroute to guvi.in (172.67.70.207), 30 hops max, 60 byte packets
+ 1  244.5.2.137 (244.5.2.137)  6.628 ms 244.5.4.151 (244.5.4.151)  1.552 ms 244.5.5.47 (244.5.5.47)  3.155 ms
+ 2  240.3.76.97 (240.3.76.97)  0.289 ms 240.3.76.96 (240.3.76.96)  0.336 ms 240.3.76.65 (240.3.76.65)  0.315 ms
+ 3  100.66.24.10 (100.66.24.10)  5.291 ms 242.8.26.19 (242.8.26.19)  1.525 ms 242.8.27.149 (242.8.27.149)  2.091 ms
+ 4  100.66.26.56 (100.66.26.56)  5.955 ms 240.3.180.47 (240.3.180.47)  1.869 ms 240.3.180.46 (240.3.180.46)  1.716 ms
+ 5  240.3.180.57 (240.3.180.57)  0.752 ms 240.3.180.53 (240.3.180.53)  1.182 ms 240.3.180.50 (240.3.180.50)  0.771 ms
+ 6  * 99.83.116.94 (99.83.116.94)  16.169 ms  16.614 ms
+ 7  242.2.74.197 (242.2.74.197)  1.328 ms * *
+ 8  240.3.180.14 (240.3.180.14)  2.324 ms 240.3.180.5 (240.3.180.5)  1.580 ms 173.245.63.101 (173.245.63.101)  0.893 ms
+ 9  172.67.70.207 (172.67.70.207)  1.774 ms 240.3.180.31 (240.3.180.31)  0.900 ms 240.3.180.16 (240.3.180.16) 
