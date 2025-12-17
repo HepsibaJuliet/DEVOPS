@@ -1,5 +1,7 @@
-# 1.Get me the IP address of a particular domain (guvi.in). How do I find my CPU/memory usage of my server?. Test the connectivity between 2 nodes?
-ubuntu@ip-172-31-67-47:~$ nslookup guvi.in #
+# 1.Get me the IP address of a particular domain (guvi.in). How do I find my CPU/memory usage of my server?. Test the connectivity between 2 nodes? #
+
+
+ubuntu@ip-172-31-67-47:~$ nslookup guvi.in
 
 Server:		127.0.0.53
 Address:	127.0.0.53#53
@@ -59,7 +61,12 @@ traceroute to guvi.in (172.67.70.207), 30 hops max, 60 byte packets
 
 
 
-# 2.I have deployed an application in guvi.com:9000, and logs show my app is running, but I’m unable to view the page. Check whether my port is open or not ? #
+# 2.I have deployed an application in guvi.com:9000, and logs show my app is running, but I’m unable to view the page. Check whether my port is open or not ? 
+
+Ans: Checked port 9000 is open on the server using the command:
+sudo ss -tulnp | grep 9000
+The command returned no output, and viewing all listening ports with sudo ss -tulnp shows only SSH (port 22) and system services.
+So, the port 9000 is not open, no application is currently listening on that port. #
 
 ubuntu@ip-172-31-67-47:~$ sudo ss -tulnp | grep 9000
 ubuntu@ip-172-31-67-47:~$ sudo ss -tulnp
