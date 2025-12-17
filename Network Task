@@ -63,7 +63,7 @@ traceroute to guvi.in (172.67.70.207), 30 hops max, 60 byte packets
 
 # 2.I have deployed an application in guvi.com:9000, and logs show my app is running, but I’m unable to view the page. Check whether my port is open or not ? 
 
-Ans: Checked port 9000 is open on the server using the command:
+Ans: Checked port 9000 is open or not on the server using the command:
 sudo ss -tulnp | grep 9000
 The command returned no output, and viewing all listening ports with sudo ss -tulnp shows only SSH (port 22) and system services.
 So, the port 9000 is not open, no application is currently listening on that port. #
