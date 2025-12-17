@@ -56,3 +56,20 @@ traceroute to guvi.in (172.67.70.207), 30 hops max, 60 byte packets
  7  242.2.74.197 (242.2.74.197)  1.328 ms * *
  8  240.3.180.14 (240.3.180.14)  2.324 ms 240.3.180.5 (240.3.180.5)  1.580 ms 173.245.63.101 (173.245.63.101)  0.893 ms
  9  172.67.70.207 (172.67.70.207)  1.774 ms 240.3.180.31 (240.3.180.31)  0.900 ms 240.3.180.16 (240.3.180.16) 
+
+
+
+# 2.I have deployed an application in guvi.com:9000, and logs show my app is running, but I’m unable to view the page. Check whether my port is open or not ? #
+
+ubuntu@ip-172-31-67-47:~$ sudo ss -tulnp | grep 9000
+ubuntu@ip-172-31-67-47:~$ sudo ss -tulnp
+Netid          State           Recv-Q          Send-Q                       Local Address:Port                   Peer Address:Port          Process                                                           
+udp            UNCONN          0               0                               127.0.0.54:53                          0.0.0.0:*              users:(("systemd-resolve",pid=328,fd=16))                        
+udp            UNCONN          0               0                            127.0.0.53%lo:53                          0.0.0.0:*              users:(("systemd-resolve",pid=328,fd=14))                        
+udp            UNCONN          0               0                        172.31.67.47%ens5:68                          0.0.0.0:*              users:(("systemd-network",pid=531,fd=21))                        
+udp            UNCONN          0               0                                127.0.0.1:323                         0.0.0.0:*              users:(("chronyd",pid=723,fd=5))                                 
+udp            UNCONN          0               0                                    [::1]:323                            [::]:*              users:(("chronyd",pid=723,fd=6))                                 
+tcp            LISTEN          0               4096                               0.0.0.0:22                          0.0.0.0:*              users:(("sshd",pid=1031,fd=3),("systemd",pid=1,fd=181))          
+tcp            LISTEN          0               4096                         127.0.0.53%lo:53                          0.0.0.0:*              users:(("systemd-resolve",pid=328,fd=15))                        
+tcp            LISTEN          0               4096                            127.0.0.54:53                          0.0.0.0:*              users:(("systemd-resolve",pid=328,fd=17))                        
+tcp            LISTEN          0               4096                                  [::]:22                             [::]:*              users:(("sshd",pid=1031,fd=4),("systemd",pid=1,fd=182)) 
