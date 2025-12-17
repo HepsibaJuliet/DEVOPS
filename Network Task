@@ -65,7 +65,7 @@ traceroute to guvi.in (172.67.70.207), 30 hops max, 60 byte packets
 
 Ans: Checked port 9000 is open or not on the server using the command:
 sudo ss -tulnp | grep 9000
-The command returned no output, and viewing all listening ports with sudo ss -tulnp shows only SSH (port 22) and system services.
+sudo ss -tulnp 
 So, the port 9000 is not open, no application is currently listening on that port. #
 
 ubuntu@ip-172-31-67-47:~$ sudo ss -tulnp | grep 9000
