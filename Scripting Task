@@ -1,3 +1,5 @@
+## 1 )  Create a shell script to print the HTTP error code of guvi.in & print, the success/failure message based on the error code response ##
+
 ubuntu@ip-172-31-71-122:~$ mkdir scripts
 ubuntu@ip-172-31-71-122:~$ cd scripts
 ubuntu@ip-172-31-71-122:~/scripts$ mkdir task
@@ -26,3 +28,40 @@ if [[ $error_code -ge 200 && $error_code -lt 300 ]]; then
 else
     echo "Failure: Website is not reachable"
 fi
+
+
+## 2 ) Given a file, replace all occurrence of the word "give" with "learning" from 5th line till the end in only those lines that contain the word "welcome" ##
+
+
+ubuntu@ip-172-31-71-122:~$ cd scripts/task
+ubuntu@ip-172-31-71-122:~/scripts/task$ touch 02_script_task.txt
+ubuntu@ip-172-31-71-122:~/scripts/task$ vi  02_script_task.txt
+ubuntu@ip-172-31-71-122:~/scripts/task$ cat 02_script_task.txt
+Welcome To the team Julie give support.
+Welcome to the team Inba give support.
+Welcome to tha team kani give support.
+Welcome to the team Mani give support.
+Welcome to the team mona give support.
+Welcome to the team Babu give support.
+Welcome to the team Naveen give support.
+Welcome to the team Kowsi give support.
+Welcome to the team Mathu give support.
+Welcome to thw team Jeba give support.
+
+Thanks,
+Hepsi.
+ubuntu@ip-172-31-71-122:~/scripts/task$ sed -i '5,$ {/Welcome/ s/give/learning/g}' 02_script_task.txt
+ubuntu@ip-172-31-71-122:~/scripts/task$ cat 02_script_task.txt
+Welcome To the team Julie give support.
+Welcome to the team Inba give support.
+Welcome to tha team kani give support.
+Welcome to the team Mani give support.
+Welcome to the team mona learning support.
+Welcome to the team Babu learning support.
+Welcome to the team Naveen learning support.
+Welcome to the team Kowsi learning support.
+Welcome to the team Mathu learning support.
+Welcome to thw team Jeba learning support.
+
+Thanks,
+Hepsi
