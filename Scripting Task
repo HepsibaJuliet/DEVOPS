@@ -1,0 +1,28 @@
+ubuntu@ip-172-31-71-122:~$ mkdir scripts
+ubuntu@ip-172-31-71-122:~$ cd scripts
+ubuntu@ip-172-31-71-122:~/scripts$ mkdir task
+ubuntu@ip-172-31-71-122:~/scripts$ cd task
+ubuntu@ip-172-31-71-122:~/scripts/task$ touch 01_HTTP_ERROR_CODE_RESPONSE
+ubuntu@ip-172-31-71-122:~/scripts/task$ touch 01_HTTP_ERROR_CODE_RESPONSE.sh
+ubuntu@ip-172-31-71-122:~/scripts/task$ nano 01_HTTP_ERROR_CODE_RESPONSE.sh
+ubuntu@ip-172-31-71-122:~/scripts/task$ chmod +x 01_HTTP_ERROR_CODE_RESPONSE.sh
+ubuntu@ip-172-31-71-122:~/scripts/task$ ls
+01_HTTP_ERROR_CODE_RESPONSE  01_HTTP_ERROR_CODE_RESPONSE.sh
+ubuntu@ip-172-31-71-122:~/scripts/task$ ./01_HTTP_ERROR_CODE_RESPONSE.sh
+HTTP Status Code of guvi.in: 301
+Failure: Website is not reachable
+
+Scripts:
+
+#!/bin/bash
+
+error_code=$(curl -o /dev/null -s -w "%{http_code}" https://guvi.in)
+
+echo "HTTP Status Code of guvi.in: $error_code"
+
+
+if [[ $error_code -ge 200 && $error_code -lt 300 ]]; then
+    echo "Success: Website is reachable"
+else
+    echo "Failure: Website is not reachable"
+fi
